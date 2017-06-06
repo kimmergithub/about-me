@@ -1,0 +1,24 @@
+body {
+  background-image: url(http://www.10wallpaper.com/wallpaper/medium/1209/New_York_City_Empire_State_Building-City_photography_wallpaper_medium.jpg);
+  background-size: 100%;
+}
+
+h1 {
+  margin-right: 280px;
+  font-size: 50px;
+  font-family: cursive;
+  text-align: right;
+}
+
+article {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.textBox {
+  float: right;
+  margin-right: 200px;
+  margin-left: 700px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 0px solid white;
+}
