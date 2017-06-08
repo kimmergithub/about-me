@@ -68,17 +68,19 @@ function questions(){
   questionFour();
 
   // questions 5//
-  if (qFour.toLowerCase() === 'yes' || qFour.toLowerCase() === 'y') {
-    var qFive = prompt('I\'m glad you like your new name ' + userName + '.  Do you think my name is a nickname? Yes/No or Y/N');
-    yes++;
+  function questionFive(){
+    if (qFour.toLowerCase() === 'yes' || qFour.toLowerCase() === 'y') {
+      var qFive = prompt('I\'m glad you like your new name ' + userName + '.  Do you think my name is a nickname? Yes/No or Y/N');
+      yes++;
+    }
+    else {
+      var userName = 'Nelly';
+      var qFive = prompt('Oh yeah ' + userName + ' I guess you have a bad nickname now.  Would you like a new one? Yes/No or Y/N');
+      no++;
+    }
+    console.log(userName + 'answered ' + qFive + ' when I was good at giving nicknames.');
   }
-  else {
-    var userName = 'Nelly';
-    var qFive = prompt('Oh yeah ' + userName + ' I guess you have a bad nickname now.  Would you like a new one? Yes/No or Y/N');
-    no++;
-  }
-  console.log(userName + 'answered ' + qFive + ' when I was good at giving nicknames.');
-
+  questionFive();
   var wrongAnswer = 0;
   // questions 6 //
   if (qFive.toLowerCase() === 'yes' || qFive.toLowerCase() === 'y') {
