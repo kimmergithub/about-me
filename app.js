@@ -70,12 +70,12 @@ function questions(){
   // questions 5//
   function questionFive(){
     if (qFour.toLowerCase() === 'yes' || qFour.toLowerCase() === 'y') {
-      var qFive = prompt('I\'m glad you like your new name ' + userName + '.  Do you think my name is a nickname? Yes/No or Y/N');
+      qFive = prompt('I\'m glad you like your new name ' + userName + '.  Do you think my name is a nickname? Yes/No or Y/N');
       yes++;
     }
     else {
-      var userName = 'Nelly';
-      var qFive = prompt('Oh yeah ' + userName + ' I guess you have a bad nickname now.  Would you like a new one? Yes/No or Y/N');
+      userName = 'Nelly';
+      qFive = prompt('Oh yeah ' + userName + ' I guess you have a bad nickname now.  Would you like a new one? Yes/No or Y/N');
       no++;
     }
     console.log(userName + 'answered ' + qFive + ' when I was good at giving nicknames.');
@@ -83,44 +83,48 @@ function questions(){
   questionFive();
   var wrongAnswer = 0;
   // questions 6 //
-  if (qFive.toLowerCase() === 'yes' || qFive.toLowerCase() === 'y') {
-    yes++;
-    alert('Too bad ' + userName + '! Let\'s play another guessing game... 4 tries, and if you win you can visit my site, if not you\'ll never see it!');
-  } else {
-    no++;
-    alert('Okay ' + userName + '. Let\'s play a guessing game... 4 tries, if you win you can visit my site, if not you\'ll never see it!');
-  }
-
-  // question 6 guessing sequence or moving onto question 7 //
   var tries = 4;
   var Answer = 25;
   var qSixAnswer = '';
 
-  while (tries > 0) {
-    var qSixAnswer = parseInt(prompt('How old do you think I am?'));
-    if (qSixAnswer > Answer) {
-      tries--;
-      alert('Wrong, you\'re too high ' + userName + '!');
-      console.log(userName + ' answered ' + qSixAnswer + 'for how old do you think I am and has ' + tries + ' attemps left!');
+  function questionSix(){
+    if (qFive.toLowerCase() === 'yes' || qFive.toLowerCase() === 'y') {
+      yes++;
+      alert('Too bad ' + userName + '! Let\'s play another guessing game... 4 tries, and if you win you can visit my site, if not you\'ll never see it!');
+    } else {
+      no++;
+      alert('Okay ' + userName + '. Let\'s play a guessing game... 4 tries, if you win you can visit my site, if not you\'ll never see it!');
     }
-    else if (qSixAnswer < Answer) {
-      tries--;
-      alert('Wrong, you\'re too low ' + userName + '!');
-      console.log(userName + ' answered ' + qSixAnswer + 'for how old do you think I am and has ' + tries + ' attemps left!');
-    }
-    else if (qSixAnswer === Answer) {
-      alert('Correct!  Good job ' + userName);
-      tries = 0;
-      console.log(userName + ' answered ' + qSixAnswer + 'and can move onto question 7!');
-    }
-    else {
-      alert(userName + ' that wasn\'t even close!');
-      tries--;
-      console.log(userName + ' answered ' + qSixAnswer + 'for how old do you think I am and has ' + tries + ' attemps left!');
-    }
-  }
 
-  alert('Looks like we need a new game ' + userName + '...  Let\'s try this...');
+  // question 6 guessing sequence or moving onto question 7 //
+
+    while (tries > 0) {
+      qSixAnswer = parseInt(prompt('How old do you think I am?'));
+      if (qSixAnswer > Answer) {
+        tries--;
+        alert('Wrong, you\'re too high ' + userName + '!');
+        console.log(userName + ' answered ' + qSixAnswer + 'for how old do you think I am and has ' + tries + ' attemps left!');
+      }
+      else if (qSixAnswer < Answer) {
+        tries--;
+        alert('Wrong, you\'re too low ' + userName + '!');
+        console.log(userName + ' answered ' + qSixAnswer + 'for how old do you think I am and has ' + tries + ' attemps left!');
+      }
+      else if (qSixAnswer === Answer) {
+        alert('Correct!  Good job ' + userName);
+        tries = 0;
+        console.log(userName + ' answered ' + qSixAnswer + 'and can move onto question 7!');
+      }
+      else {
+        alert(userName + ' that wasn\'t even close!');
+        tries--;
+        console.log(userName + ' answered ' + qSixAnswer + 'for how old do you think I am and has ' + tries + ' attemps left!');
+      }
+    }
+
+    alert('Looks like we need a new game ' + userName + '...  Let\'s try this...');
+  }
+  questionSix();
 
   var qCorrectAnswers = ['kirito', 'asuna', 'eren', 'mikasa', 'naruto', 'captain Levi', 'kakarot'];
   var tries = 6;
