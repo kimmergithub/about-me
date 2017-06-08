@@ -130,22 +130,25 @@ function questions(){
   var tries = 6;
 
   // var qSevenAnswer = qPossibleAnswers['5'];
-  while (tries > 0) {
-    var qSeven = prompt('Name one of my favorite anime characters?');
-    if (qCorrectAnswers.indexOf(qSeven.trim().toLowerCase()) >= 0) {
-      alert('Good guess! ' + userName + '.');
-      tries = 0;
-      console.log(userName + ' answered ' + qSeven + 'when asked what one of my favorite anime characters name\'s and can move onto my site!');
-    }
-    else {
-      alert('Sorry ' + userName + ' you\'re not even close!');
-      tries--;
-      console.log(userName + ' answered ' + qSeven + 'when asked what one of my favorite anime characters name\'s and has ' + tries + ' attempts left!');
-    }
+  function questionSeven(){
+    while (tries > 0) {
+      qSeven = prompt('Name one of my favorite anime characters?');
+      if (qCorrectAnswers.indexOf(qSeven.trim().toLowerCase()) >= 0) {
+        alert('Good guess! ' + userName + '.');
+        tries = 0;
+        console.log(userName + ' answered ' + qSeven + 'when asked what one of my favorite anime characters name\'s and can move onto my site!');
+      }
+      else {
+        alert('Sorry ' + userName + ' you\'re not even close!');
+        tries--;
+        console.log(userName + ' answered ' + qSeven + 'when asked what one of my favorite anime characters name\'s and has ' + tries + ' attempts left!');
+      }
 
+    }
+    alert('The possible answers were ' + qCorrectAnswers + '.');
+    alert('Fine!  I\'ll let you move onto my site... it\'s pretty cool!');
   }
-  alert('The possible answers were ' + qCorrectAnswers + '.');
-  alert('Fine!  I\'ll let you move onto my site... it\'s pretty cool!');
-}
+  questionSeven();
 
+}
 questions();
