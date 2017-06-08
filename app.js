@@ -10,17 +10,16 @@ var no = 0;
 
 // questions 1  SIDE notes Prompt always outputs string//
 if (userName) {
-    var qOne = prompt('Tell me ' + userName + '. What do you think, does my website look nice? Enter: Yes/No or Y/N')
-}
-else {
+  var qOne = prompt('Tell me ' + userName + '. What do you think, does my website look nice? Enter: Yes/No or Y/N')
+} else {
   var qOne = prompt('I am not sure that is a name, but tell me ' + userName + '. What do you think, does my website look nice?')
 };
 console.log(userName + ' answered ' + qOne + ' when asked if my site looked nice.');
 
 //questions 2 tell the lie//
 if (qOne.toLowerCase() === 'yes' || qOne.toLowerCase() === 'y') {
-    var qTwo = prompt('Thank you ' + userName + '.  Did you know that I am an experienced web developer? Yes/No or Y/N')
-    yes++
+  var qTwo = prompt('Thank you ' + userName + '.  Did you know that I am an experienced web developer? Yes/No or Y/N')
+  yes++
 } else {
     var qTwo = prompt('That is not very nice ' + userName + '.  Did you know that this is my first website? Yes/No or Y/N')
     no++
@@ -118,29 +117,3 @@ while (tries > 0) {
 }
 alert('The possible answers were ' + qCorrectAnswers + '.');
 alert('Fine!  I\'ll let you move onto my site... it\'s prett cool!');
-
-// if (qFive.toLowerCase() === '25') {
-//     // This is where we move onto q7
-//     yes++
-//     alert('Great job ' + userName + '! But you\'re not quite finished')
-//       var qSeven = prompt('How old do you think I am?')
-// } else {
-//     no++
-//     wrongAnswer++
-//     do {
-//       alert('Wrong! Okay ' + userName + ' you have ' + variable ' tries left.  How old am I?')
-//       var qSix = prompt('How old do you think I am?')
-//     }
-// }
-
-
-
-// // questions ?//
-// if (qFive.toLowerCase() === 'yes' || qFive.toLowerCase() === 'y') {
-//     yes++
-//     alert('Wow ' + userName + '! ' + yes + ' yeses and ' + no + ' no\'s...')
-//     alert('Please check out my site, maybe it will help regain some trust!  Thank you ' + userName + '.')
-// } else {
-//     alert('Please check out my site, maybe it will help regain some trust!  Thank you ' + userName + '.')
-//     no++
-// }
