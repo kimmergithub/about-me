@@ -34,14 +34,15 @@ questionTwo();
 
 // questions 3 admit the lie//
 function questionThree(){
-if (qTwo.trim().toLowerCase() === 'yes' || qTwo.toLowerCase() === 'y') {
-  var qThree = prompt(userName + ' I was lying... I\'m a newb!  Are you usually this gullable?  Enter: Yes/No or Y/N');
-  yes++;
-} else {
-  var qThree = prompt(userName + ' I was lying... I\'m a newb!  Are you usually this gullable?  Enter: Yes/No or Y/N');
-  no++;
-};
-console.log(userName + 'answered ' + qThree + ' if they are usually this gullable.');
+  if (qTwo.trim().toLowerCase() === 'yes' || qTwo.toLowerCase() === 'y') {
+    var qThree = prompt(userName + ' I was lying... I\'m a newb!  Are you usually this gullable?  Enter: Yes/No or Y/N');
+    yes++;
+  } else {
+    var qThree = prompt(userName + ' I was lying... I\'m a newb!  Are you usually this gullable?  Enter: Yes/No or Y/N');
+    no++;
+  };
+  console.log(userName + 'answered ' + qThree + ' if they are usually this gullable.');
+}
 questionThree();
 
 // questions 4//
