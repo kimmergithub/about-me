@@ -9,12 +9,15 @@ var yes = 0;
 var no = 0;
 
 // questions 1  SIDE notes Prompt always outputs string//
-if (userName) {
-  var qOne = prompt('Tell me ' + userName + '. What do you think, does my website look nice? Enter: Yes/No or Y/N');
-} else {
-  var qOne = prompt('I am not sure that is a name, but tell me ' + userName + '. What do you think, does my website look nice?');
-};
-console.log(userName + ' answered ' + qOne + ' when asked if my site looked nice.');
+function questionOne(){
+  if (userName) {
+    var qOne = prompt('Tell me ' + userName + '. What do you think, does my website look nice? Enter: Yes/No or Y/N');
+  } else {
+    var qOne = prompt('I am not sure that is a name, but tell me ' + userName + '. What do you think, does my website look nice?');
+  };
+  console.log(userName + ' answered ' + qOne + ' when asked if my site looked nice.');
+}
+questionOne();
 
 //questions 2 tell the lie//
 if (qOne.toLowerCase() === 'yes' || qOne.toLowerCase() === 'y') {
