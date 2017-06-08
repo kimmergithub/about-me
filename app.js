@@ -33,6 +33,7 @@ function questionTwo(){
 questionTwo();
 
 // questions 3 admit the lie//
+function questionThree(){
 if (qTwo.trim().toLowerCase() === 'yes' || qTwo.toLowerCase() === 'y') {
   var qThree = prompt(userName + ' I was lying... I\'m a newb!  Are you usually this gullable?  Enter: Yes/No or Y/N');
   yes++;
@@ -41,6 +42,7 @@ if (qTwo.trim().toLowerCase() === 'yes' || qTwo.toLowerCase() === 'y') {
   no++;
 };
 console.log(userName + 'answered ' + qThree + ' if they are usually this gullable.');
+questionThree();
 
 // questions 4//
 if (qThree.toLowerCase() === 'yes' || qThree.toLowerCase() === 'y') {
