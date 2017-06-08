@@ -1,24 +1,65 @@
+* {
+  border: solid 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+
 body {
   background-image: url(http://www.10wallpaper.com/wallpaper/medium/1209/New_York_City_Empire_State_Building-City_photography_wallpaper_medium.jpg);
-  background-size: 100%;
+  background-size: 100% auto;
+
 }
 
 h1 {
-  margin-right: 280px;
+  margin-right: 260px;
+  margin-left: 735px;
   font-size: 50px;
   font-family: cursive;
   text-align: right;
+  position: relative;
 }
+
+/*h3 {
+  font-size: 5px;
+}*/
 
 article {
   margin-left: 10px;
   margin-right: 10px;
+  /*display: inline;*/
+  height: 550px;
+  overflow: auto;
 }
 
 .textBox {
-  float: right;
+  /*float: right;*/
+  /*height: 500px
+  width: 500px;*/
   margin-right: 200px;
   margin-left: 700px;
   background-color: rgba(255, 255, 255, 0.6);
-  border: 0px solid white;
+  border: solid 1px;
+  overflow: scroll;
+}
+
+#ProfilePic {
+  display: inline;
+  margin-left: 300px;
+  border-radius: 100%;
+  width: 17%;
+  height: 17%;
+  float: left;
+  position: relative;
+  border: solid 1px;
+}
+
+#SnapIcon {
+  /*margin-left: 300px;*/
+  display: inline;
+  left: 320px;
+  down: 400px;
+  width: 3%;
+  height: 3%;
+  /*float: left;*/
+  position: relative;
+
 }
