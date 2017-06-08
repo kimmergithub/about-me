@@ -54,15 +54,18 @@ function questions(){
   questionThree();
 
   // questions 4//
-  if (qThree.toLowerCase() === 'yes' || qThree.toLowerCase() === 'y') {
-    var userName = 'Mr. Gullable';
-    var qFour = prompt('Hmmm... ' + userName + ' do think I\'m good at giving nicknames? Yes/No or Y/N');
-    yes++;
-  } else {
-    var qFour = prompt('Well ' + userName + ', let me ask you, am I good at giving nickname? Yes/No or Y/N');
-    no++;
+  function questionFour(){
+    if (qThree.toLowerCase() === 'yes' || qThree.toLowerCase() === 'y') {
+      var userName = 'Mr. Gullable';
+      var qFour = prompt('Hmmm... ' + userName + ' do think I\'m good at giving nicknames? Yes/No or Y/N');
+      yes++;
+    } else {
+      var qFour = prompt('Well ' + userName + ', let me ask you, am I good at giving nickname? Yes/No or Y/N');
+      no++;
+    }
+    console.log(userName + 'answered ' + qFour + ' when asked if I am good at giving nicknames.');
   }
-  console.log(userName + 'answered ' + qFour + ' when asked if I am good at giving nicknames.');
+  questionFour();
 
   // questions 5//
   if (qFour.toLowerCase() === 'yes' || qFour.toLowerCase() === 'y') {
@@ -136,7 +139,7 @@ function questions(){
 
   }
   alert('The possible answers were ' + qCorrectAnswers + '.');
-  alert('Fine!  I\'ll let you move onto my site... it\'s prett cool!');
+  alert('Fine!  I\'ll let you move onto my site... it\'s pretty cool!');
 }
 
 questions();
