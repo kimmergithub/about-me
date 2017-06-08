@@ -20,14 +20,17 @@ function questionOne(){
 questionOne();
 
 //questions 2 tell the lie//
-if (qOne.toLowerCase() === 'yes' || qOne.toLowerCase() === 'y') {
-  var qTwo = prompt('Thank you ' + userName + '.  Did you know that I am an experienced web developer? Yes/No or Y/N');
-  yes++;
-} else {
-  var qTwo = prompt('That is not very nice ' + userName + '.  Did you know that this is my first website? Yes/No or Y/N');
-  no++;
+function questionTwo(){
+  if (qOne.toLowerCase() === 'yes' || qOne.toLowerCase() === 'y') {
+    var qTwo = prompt('Thank you ' + userName + '.  Did you know that I am an experienced web developer? Yes/No or Y/N');
+    yes++;
+  } else {
+    var qTwo = prompt('That is not very nice ' + userName + '.  Did you know that this is my first website? Yes/No or Y/N');
+    no++;
+  }
+  console.log(userName + ' answered ' + qTwo + ' when asked question 2.  The lie question.');
 }
-console.log(userName + ' answered ' + qTwo + ' when asked question 2.  The lie question.');
+questionTwo();
 
 // questions 3 admit the lie//
 if (qTwo.trim().toLowerCase() === 'yes' || qTwo.toLowerCase() === 'y') {
