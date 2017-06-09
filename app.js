@@ -13,7 +13,6 @@ function questions(){
   var qThree = '';
   var qFour = '';
   var qFive = '';
-  var qSix = '';
   var qSeven = '';
 
   // questions 1  SIDE notes Prompt always outputs string//
@@ -22,7 +21,7 @@ function questions(){
       qOne = prompt('Tell me ' + userName + '. What do you think, does my website look nice? Enter: Yes/No or Y/N');
     } else {
       qOne = prompt('I am not sure that is a name, but tell me ' + userName + '. What do you think, does my website look nice?');
-    };
+    }
     console.log(userName + ' answered ' + qOne + ' when asked if my site looked nice.');
   }
   questionOne();
@@ -35,7 +34,7 @@ function questions(){
     } else {
       qTwo = prompt('That is not very nice ' + userName + '.  Did you know that this is my first website? Yes/No or Y/N');
       no++;
-    };
+    }
     console.log(userName + ' answered ' + qTwo + ' when asked question 2.  The lie question.');
   }
   questionTwo();
@@ -48,7 +47,7 @@ function questions(){
     } else {
       qThree = prompt(userName + ' I was lying... I\'m a newb!  Are you usually this gullable?  Enter: Yes/No or Y/N');
       no++;
-    };
+    }
     console.log(userName + 'answered ' + qThree + ' if they are usually this gullable.');
   }
   questionThree();
@@ -56,11 +55,11 @@ function questions(){
   // questions 4//
   function questionFour(){
     if (qThree.toLowerCase() === 'yes' || qThree.toLowerCase() === 'y') {
-      var userName = 'Mr. Gullable';
-      var qFour = prompt('Hmmm... ' + userName + ' do think I\'m good at giving nicknames? Yes/No or Y/N');
+      userName = 'Mr. Gullable';
+      qFour = prompt('Hmmm... ' + userName + ' do think I\'m good at giving nicknames? Yes/No or Y/N');
       yes++;
     } else {
-      var qFour = prompt('Well ' + userName + ', let me ask you, am I good at giving nickname? Yes/No or Y/N');
+      qFour = prompt('Well ' + userName + ', let me ask you, am I good at giving nickname? Yes/No or Y/N');
       no++;
     }
     console.log(userName + 'answered ' + qFour + ' when asked if I am good at giving nicknames.');
@@ -127,7 +126,7 @@ function questions(){
   questionSix();
 
   var qCorrectAnswers = ['kirito', 'asuna', 'eren', 'mikasa', 'naruto', 'captain Levi', 'kakarot'];
-  var tries = 6;
+  tries = 6;
 
   // var qSevenAnswer = qPossibleAnswers['5'];
   function questionSeven(){
@@ -149,6 +148,7 @@ function questions(){
     alert('Fine!  I\'ll let you move onto my site... it\'s pretty cool!');
   }
   questionSeven();
+  console.log(yes + ' yeses & ' + no + ' no\'s & ' + wrongAnswer + ' wrong answers.');
 
 }
 questions();
