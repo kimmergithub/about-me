@@ -1,5 +1,5 @@
 * {
-  border: solid 1px rgba(0, 0, 0, 0);
+  border: solid 1px rgba(0, 0, 0, 1);
   position: relative;
 }
 
@@ -42,24 +42,27 @@ article {
 }
 
 #ProfilePic {
-  display: inline;
   margin-left: 300px;
   border-radius: 100%;
   width: 17%;
   height: 17%;
-  float: left;
-  position: relative;
+  /*position: relative;*/
   border: solid 1px;
+  float: left;
+  /*clear: right;*/
 }
 
 #SnapIcon {
   /*margin-left: 300px;*/
-  display: inline;
-  left: 320px;
+  left: 10px;
   down: 400px;
   width: 3%;
   height: 3%;
-  /*float: left;*/
-  position: relative;
+  /*position: relative;*/
+  float: left;
+}
+
+#photoPlacement {
+  align-items: center;
 
 }
