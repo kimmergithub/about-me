@@ -145,6 +145,7 @@ function questions(){
 
     }
     alert('The possible answers were ' + qCorrectAnswers + '.');
+    alert('So it looks like you answered ' + yes + ' yeses & ' + no + ' no\'s & ' + wrongAnswer + ' wrong answers.');
     alert('Fine!  I\'ll let you move onto my site... it\'s pretty cool!');
   }
   questionSeven();
